@@ -1,3 +1,8 @@
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
 module.exports = {
   siteMetadata: {
     title: `Mint im Kopf`,
@@ -11,6 +16,24 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.API_URL || `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        //If using single types place them in this array.
+        singleTypes: [
+          `about`,
+          `hero`,
+          `impressum`,
+          `kontakt`,
+          `konzept`,
+          `leistungen`,
+          `prices`,
+          `reviews`,
+        ],
       },
     },
     `gatsby-transformer-sharp`,

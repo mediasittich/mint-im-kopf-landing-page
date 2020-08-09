@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.23",
+    "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.5.12",
     "intersection-observer": "^0.11.0",
     "node-sass": "^4.14.1",
