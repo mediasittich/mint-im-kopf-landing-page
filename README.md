@@ -1,0 +1,1 @@
+# mint-im-kopf Landing Page Frontend
