@@ -1,54 +1,38 @@
 import React from "react"
-import { Container, Row, Col, Button } from "react-bootstrap"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-import styled from "styled-components"
-
-const BgImage = styled(BackgroundImage)`
-  width: 100%;
-  height: 60vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-`
-
-const HeroContainer = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-`
 
 const Hero = () => {
-  const imageData = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      hero: file(relativePath: { eq: "pexels-julia-m-cameron-4143794.jpg" }) {
-        childImageSharp {
-          fluid(quality: 90, maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+      strapiHero {
+        Titel
+        Intro_Text
+        bg_img {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
     }
   `)
   return (
-    <BgImage fluid={imageData.hero.childImageSharp.fluid} fadeIn>
-      <HeroContainer fluid>
-        <Container className="text-center">
-          <p className="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-            molestiae eveniet numquam inventore dicta eos, ducimus eius soluta
-            sed itaque.
-          </p>
-          <Button variant="primary" size="lg" href="#">
+    <BackgroundImage
+      id="hero-bg-img"
+      fluid={data.strapiHero.bg_img.childImageSharp.fluid}
+      fadeIn
+    >
+      <div fluid className="container-fluid hero-container">
+        <div className="container text-center">
+          <p className="lead pb-5">{data.strapiHero.Intro_Text}</p>
+          <a href="#" variant="primary" className="btn btn-primary btn-lg">
             Learn more
-          </Button>
-        </Container>
-      </HeroContainer>
-    </BgImage>
+          </a>
+        </div>
+      </div>
+    </BackgroundImage>
   )
 }
 
