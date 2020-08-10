@@ -44,7 +44,7 @@ const Pricing = () => {
     )
   })
   return (
-    <section className="site-section pricing-section pb-0" id="pricing-section">
+    <section className="site-section pricing-section" id="pricing-section">
       <div className="container">
         <div className="row mb-5 justify-content-center">
           <div className="colg-lg-7 text-center">

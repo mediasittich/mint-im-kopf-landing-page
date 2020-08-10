@@ -46,7 +46,7 @@ const Features = () => {
     )
   })
   return (
-    <div className="site-section pb-0">
+    <div className="site-section">
       <div className="container">
         <div className="row mb-5 justify-content-center aos-init">
           <div className="col-lg-7 text-center">

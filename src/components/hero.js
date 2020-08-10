@@ -27,12 +27,16 @@ const Hero = () => {
     >
       <div fluid className="container-fluid hero-container">
         <div className="container text-center">
-          <p className="lead pb-5">
-            <ReactMarkdown source={data.strapiHero.intro_text} />
-          </p>
-          <a href="#" variant="primary" className="btn btn-primary btn-lg">
-            Learn more
-          </a>
+          <div className="row">
+            <div className="col col-lg-8 ml-auto mr-auto">
+              <p className="lead pb-5">
+                <ReactMarkdown source={data.strapiHero.intro_text} />
+              </p>
+              <a href="#" variant="primary" className="btn btn-primary btn-lg">
+                Learn more
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </BackgroundImage>

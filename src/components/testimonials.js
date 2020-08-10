@@ -77,7 +77,7 @@ const Testimonials = () => {
 
   return (
     <div
-      className="testimonials-section site-section pb-0"
+      className="testimonials-section site-section"
       id="testimonials-section"
     >
       <div className="container">

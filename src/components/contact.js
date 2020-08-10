@@ -20,7 +20,7 @@ const Contact = () => {
   `)
   return (
     <section
-      className="contact-section site-section pb-0 bg-light"
+      className="contact-section site-section bg-light"
       style={{ padding: "4em 0" }}
     >
       <div className="container">
