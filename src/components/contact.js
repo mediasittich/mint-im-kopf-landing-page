@@ -19,11 +19,14 @@ const Contact = () => {
     }
   `)
   return (
-    <section className="contact-section bg-light" style={{ padding: "4em 0" }}>
-      <Container>
-        <Row className="justify-content-center">
-          <Col md={7}>
-            <h2>{data.strapiKontakt.title}</h2>
+    <section
+      className="contact-section site-section pb-0 bg-light"
+      style={{ padding: "4em 0" }}
+    >
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-7 text-center">
+            <h2 className="section-title">{data.strapiKontakt.title}</h2>
             <p className="mb-5">
               <ReactMarkdown source={data.strapiKontakt.intro_text} />
             </p>
@@ -93,9 +96,9 @@ const Contact = () => {
                 value="Absenden"
               />
             </Form>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

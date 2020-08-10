@@ -5,5 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-// import "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-// import "./src/styles/global.css"
+
+import "./node_modules/slick-carousel/slick/slick.css"
+import "./node_modules/slick-carousel/slick/slick-theme.css"
