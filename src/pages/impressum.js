@@ -1,16 +1,24 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Impressum = () => (
+const Impressum = ({ data }) => (
   <Layout>
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <div className="container">
+      <ReactMarkdown source={data.strapiImpressum.content} />
+    </div>
   </Layout>
 )
+export const query = graphql`
+  {
+    strapiImpressum {
+      content
+    }
+  }
+`
 
 export default Impressum
