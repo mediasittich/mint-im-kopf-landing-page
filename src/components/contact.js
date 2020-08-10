@@ -31,11 +31,10 @@ const Contact = () => {
               <ReactMarkdown source={data.strapiKontakt.intro_text} />
             </p>
 
-            <form method="post" action={process.env.FORM_ENDPOINT}>
-              <label for="name"> What is your name?</label>
+            <form action={`${process.env.FORM_ENDPOINT}`} method="POST">
               <input type="text" name="name" />
-              <label for="email"> What is your email address?</label>
               <input type="email" name="email" />
+              <input type="text" name="message" />
               <button type="submit">Send</button>
             </form>
           </div>
