@@ -31,71 +31,33 @@ const Contact = () => {
               <ReactMarkdown source={data.strapiKontakt.intro_text} />
             </p>
 
-            <Form onSubmit={handleSubmit}>
-              <Row>
-                <Col md={6}>
-                  <FormGroup>
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control
-                      type="text"
-                      id="inputLastName"
-                      value={lastName}
-                      onChange={e => setLasttName(e.target.value)}
-                    ></Form.Control>
-                  </FormGroup>
-                </Col>
-                <Col md={6}>
-                  <FormGroup>
-                    <Form.Label>Vorname</Form.Label>
-                    <Form.Control
-                      type="text"
-                      id="inputFirstName"
-                      value={firstName}
-                      onChange={e => setFirstName(e.target.value)}
-                    ></Form.Control>
-                  </FormGroup>
-                </Col>
-              </Row>
-
-              <FormGroup>
-                <label for="inputTelefon">Telefon</label>
-                <input
-                  type="text"
-                  value={firstName}
-                  onChange={e => setFirstName(e.target.value)}
-                  className="form-control"
-                  id="inputFirstName"
-                />
-              </FormGroup>
-              <FormGroup>
-                <label for="inputEmail">Email</label>
-                <input
-                  type="text"
-                  value={firstName}
-                  onChange={e => setFirstName(e.target.value)}
-                  className="form-control"
-                  id="inputFirstName"
-                />
-              </FormGroup>
-
-              <FormGroup>
-                <label for="exampleFormControlTextarea1">Ihre Nachricht</label>
-                <textarea
-                  className="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                  value={firstName}
-                  onChange={e => setFirstName(e.target.value)}
-                ></textarea>
-              </FormGroup>
-
-              <Button
-                as="input"
-                variant="primary"
-                type="submit"
-                value="Absenden"
-              />
-            </Form>
+            <form
+              method="post"
+              data-netlify-honeypot="bot-field"
+              data-netlify="true"
+              name="contact"
+            >
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
+              <label>
+                Name
+                <input type="text" name="name" id="name" />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" id="email" />
+              </label>
+              <label>
+                Subject
+                <input type="text" name="subject" id="subject" />
+              </label>
+              <label>
+                Message
+                <textarea name="message" id="message" rows="5" />
+              </label>
+              <button type="submit">Send</button>
+              <input type="reset" value="Clear" />
+            </form>
           </div>
         </div>
       </div>
