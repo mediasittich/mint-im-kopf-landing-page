@@ -1,15 +1,23 @@
 $mint: #68ba82;
 $mint-dark: #064a23;
 $theme-colors: ('primary': $mint-dark);
+$main-font: 'Roboto',
+sans-serif;
+$primary-color: $mint;
+$light-gray: #f8f8f8;
+$main-font-color: #808080;
 
 
-
-$body-font-family: 'Work Sans',
+$body-font-family: 'Roboto',
 sans-serif;
 $heading-font-family: 'Montserrat',
 sans-serif;
 
 $font-family-sans-serif: $body-font-family;
 $font-weight-base: 300;
-$headings-font-family: $heading-font-family;
-$headings-font-weight: 900;
+// $headings-font-family: $heading-font-family;
+// $headings-font-weight: 900;
+
+$box-shadow: 0 3px 0px 0 rgba(0, 0, 0, .08);
+$box-shadow-hover: 0 20px 35px 0 rgba(0, 0, 0, .08);
+$transition-all: all .3s ease-in-out;

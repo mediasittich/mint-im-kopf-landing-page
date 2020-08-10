@@ -3,6 +3,10 @@ const activeEnv =
 
 console.log(`Using environment config: '${activeEnv}'`)
 
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Mint im Kopf`,
@@ -59,6 +63,10 @@ module.exports = {
           {
             family: `Work Sans`,
             variants: [`300`],
+          },
+          {
+            family: `Roboto`,
+            variants: [`300`, `400`, `500`, `700`],
           },
         ],
       },

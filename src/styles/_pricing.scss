@@ -1,0 +1,86 @@
+// Varibles
+$pricing-font-weight: 300;
+
+.pricing-section {
+    background-color: $light-gray;
+    font-weight: $pricing-font-weight;
+
+    .row {}
+
+    .card {
+        border: 0;
+        border-radius: 0px;
+        box-shadow: $box-shadow;
+        transition: $transition-all;
+        padding: 2.25rem 0;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: $primary-color;
+            transition: 0.5s;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: $box-shadow-hover;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        & .card-header {
+            background-color: #fff;
+            padding-left: ($spacer * 2);
+            border-bottom: 0;
+        }
+
+        & .card-title {
+            margin-bottom: 0;
+        }
+
+        & .list-group-item {
+            border: 0;
+            padding: .25rem;
+            color: $main-font-color;
+            font-weight: $pricing-font-weight;
+        }
+    }
+
+    // Pricing Text
+    .display-2 {
+        font-size: 5rem;
+        // font-size: 7rem;
+        letter-spacing: -.5rem;
+
+        & .currency {
+            font-size: 2rem;
+            // font-size: 2.75rem;
+            position: relative;
+            top: -32px;
+            font-weight: $pricing-font-weight + 100;
+            letter-spacing: 0;
+        }
+
+        & .price {
+            white-space: nowrap;
+            line-height: 1.1;
+        }
+
+        & .unit {
+            font-size: 1rem;
+            // position: relative;
+            // top: -45px;
+            color: lighten($main-font-color, 20%);
+            letter-spacing: 0;
+            white-space: nowrap;
+        }
+    }
+
+}
