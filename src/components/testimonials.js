@@ -27,18 +27,17 @@ const Testimonials = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 480,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -46,10 +45,11 @@ const Testimonials = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
+          infinite: true,
         },
       },
     ],
