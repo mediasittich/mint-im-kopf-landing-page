@@ -18,6 +18,7 @@ const Contact = () => {
       }
     }
   `)
+  console.log(process.env.FORM_ENDPOINT)
   return (
     <section
       className="contact-section site-section bg-light"
