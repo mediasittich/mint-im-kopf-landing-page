@@ -1,6 +1,15 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    {
+      strapiAbout {
+        title
+        description
+      }
+    }
+  `)
   return (
     <div
       className="site-section bg-image overlay bg-dark text-white"
@@ -9,19 +18,14 @@ const About = () => {
       <div className="container">
         <div className="row justify-content-center align-items-center">
           <div className="col-md-8 text-center testimony">
-            <img
+            {/* <img
               src="../images/person_4.webp"
               alt="Image"
               className="img-fluid w-25 mb-4 rounded-circle"
-            />
-            <h3 className="mb-4">Jerome Jensen</h3>
+            /> */}
+            <h3 className="mb-4">{data.strapiAbout.title}</h3>
             <blockquote>
-              <p>
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                rem soluta sit eius necessitatibus voluptate excepturi beatae ad
-                eveniet sapiente impedit quae modi quo provident odit molestias!
-                Rem reprehenderit assumenda”
-              </p>
+              <p>“{data.strapiAbout.description}”</p>
             </blockquote>
           </div>
         </div>
