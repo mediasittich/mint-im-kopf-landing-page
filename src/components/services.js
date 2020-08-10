@@ -72,7 +72,6 @@ const Services = () => {
       )
     })
 
-  console.log(services.Gruppe)
   return (
     <div className="site-section" id="services-section">
       <div className="container">
