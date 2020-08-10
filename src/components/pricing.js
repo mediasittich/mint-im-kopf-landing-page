@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 const Pricing = () => {
   const data = useStaticQuery(graphql`
@@ -22,7 +23,9 @@ const Pricing = () => {
       <div key={price.id}>
         <p>{price.price}</p>
         <p>{price.unit}</p>
-        <p>{price.description}</p>
+        <p>
+          <ReactMarkdown source={price.description} />
+        </p>
       </div>
     )
   })

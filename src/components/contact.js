@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactMarkdown from "react-markdown"
 import { Container, Row, Col, Form, FormGroup, Button } from "react-bootstrap"
 
 const Contact = () => {
@@ -23,7 +24,9 @@ const Contact = () => {
         <Row className="justify-content-center">
           <Col md={7}>
             <h2>{data.strapiKontakt.title}</h2>
-            <p className="mb-5">{data.strapiKontakt.intro_text}</p>
+            <p className="mb-5">
+              <ReactMarkdown source={data.strapiKontakt.intro_text} />
+            </p>
 
             <Form onSubmit={handleSubmit}>
               <Row>

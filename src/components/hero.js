@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import ReactMarkdown from "react-markdown"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
     {
       strapiHero {
-        Titel
-        Intro_Text
+        titel
+        intro_text
         bg_img {
           childImageSharp {
             fluid {
@@ -26,7 +27,9 @@ const Hero = () => {
     >
       <div fluid className="container-fluid hero-container">
         <div className="container text-center">
-          <p className="lead pb-5">{data.strapiHero.Intro_Text}</p>
+          <p className="lead pb-5">
+            <ReactMarkdown source={data.strapiHero.intro_text} />
+          </p>
           <a href="#" variant="primary" className="btn btn-primary btn-lg">
             Learn more
           </a>

@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FiCheck } from "react-icons/fi"
+import ReactMarkdown from "react-markdown"
 
 const Features = () => {
   const data = useStaticQuery(graphql`
@@ -37,7 +38,9 @@ const Features = () => {
           </span>
         </div>
         <div>
-          <span className="m-0">{feature.content}</span>
+          <span className="m-0">
+            <ReactMarkdown source={feature.content} />
+          </span>
         </div>
       </div>
     )

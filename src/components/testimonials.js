@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
@@ -21,7 +22,9 @@ const Testimonials = () => {
       <div className="card" key={rev.id}>
         <div className="card-body">
           <h5 className="card-title">{rev.Title}</h5>
-          <p className="card-text">"{rev.Quote}"</p>
+          <blockquote className="card-text">
+            <ReactMarkdown source={rev.Quote} />
+          </blockquote>
           <p className="card-text">
             <small>
               {rev.Name}

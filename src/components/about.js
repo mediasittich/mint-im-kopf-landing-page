@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ReactMarkdown from "react-markdown"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +26,9 @@ const About = () => {
             /> */}
             <h3 className="mb-4">{data.strapiAbout.title}</h3>
             <blockquote>
-              <p>“{data.strapiAbout.description}”</p>
+              <blockquote>
+                <ReactMarkdown source={data.strapiAbout.description} />
+              </blockquote>
             </blockquote>
           </div>
         </div>
