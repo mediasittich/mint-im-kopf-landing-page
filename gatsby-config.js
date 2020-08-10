@@ -1,10 +1,11 @@
 const activeEnv =
   process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
-const formEndpoint = process.env.FORM_ENDPOINT
+const formEndpoint = process.env.GATSBY_FORM_ENDPOINT
 
 console.log(`Using environment config: '${activeEnv}'`)
 console.log(`Form endpoint: ${formEndpoint}`)
+console.log(process.env.GATSBY_ACTIVE_ENV)
 
 require("dotenv").config({
   path: `.env.${activeEnv}`,

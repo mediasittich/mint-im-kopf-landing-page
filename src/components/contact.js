@@ -32,7 +32,7 @@ const Contact = () => {
               <ReactMarkdown source={data.strapiKontakt.intro_text} />
             </p>
 
-            <form action={`${process.env.FORM_ENDPOINT}`} method="POST">
+            <form action={`${process.env.GATSBY_FORM_ENDPOINT}`} method="POST">
               <input type="text" name="name" />
               <input type="email" name="email" />
               <input type="text" name="message" />
