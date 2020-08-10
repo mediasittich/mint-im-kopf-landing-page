@@ -1,0 +1,12 @@
+.list-group-block:nth-child(even) {
+
+    .list-group-image {
+        @extend .order-1;
+        @extend .order-lg-2;
+    }
+
+    .list-group-text {
+        @extend .order-2;
+        @extend .order-lg-1;
+    }
+}
