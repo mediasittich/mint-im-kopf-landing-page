@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { Container, Row, Col, Form, FormGroup, Button } from "react-bootstrap"
 
 const Contact = () => {
@@ -8,18 +9,22 @@ const Contact = () => {
   const handleSubmit = () => {
     alert("Nachricht gesendet")
   }
+  const data = useStaticQuery(graphql`
+    {
+      strapiKontakt {
+        title
+        intro_text
+      }
+    }
+  `)
   return (
     <section className="contact-section bg-light" style={{ padding: "4em 0" }}>
       <Container>
         <Row className="justify-content-center">
           <Col md={7}>
-            <h2>Kontakt</h2>
-            <p className="mb-5">
-              Rufen Sie mich gerne an oder schreiben Sie mir eine E-Mail.
-              Alternativ können sie auch das untenstehende Kontaktformular
-              nutzen.
-            </p>
-            <p>E-Mail: kontakt@mint-im-kopf.de Telefon: 0162 3028119</p>
+            <h2>{data.strapiKontakt.title}</h2>
+            <p className="mb-5">{data.strapiKontakt.intro_text}</p>
+
             <Form onSubmit={handleSubmit}>
               <Row>
                 <Col md={6}>

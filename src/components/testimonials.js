@@ -17,7 +17,6 @@ const Testimonials = () => {
     }
   `)
   const reviewsList = data.strapiReviews.review.map(rev => {
-    console.log(rev)
     return (
       <div className="card" key={rev.id}>
         <div className="card-body">
