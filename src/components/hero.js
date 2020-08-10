@@ -11,7 +11,7 @@ const Hero = () => {
         intro_text
         bg_img {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1920, quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }

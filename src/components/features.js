@@ -17,7 +17,7 @@ const Features = () => {
         }
         feature_img {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 600, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }

@@ -15,7 +15,7 @@ const Services = () => {
             id
             List_image {
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 600, quality: 90) {
                   ...GatsbyImageSharpFluid
                 }
               }
