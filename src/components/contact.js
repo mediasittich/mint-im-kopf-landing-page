@@ -31,32 +31,12 @@ const Contact = () => {
               <ReactMarkdown source={data.strapiKontakt.intro_text} />
             </p>
 
-            <form
-              method="post"
-              data-netlify-honeypot="bot-field"
-              data-netlify="true"
-              name="contact"
-            >
-              <input type="hidden" name="bot-field" />
-              <input type="hidden" name="form-name" value="contact" />
-              <label>
-                Name
-                <input type="text" name="name" id="name" />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" id="email" />
-              </label>
-              <label>
-                Subject
-                <input type="text" name="subject" id="subject" />
-              </label>
-              <label>
-                Message
-                <textarea name="message" id="message" rows="5" />
-              </label>
+            <form method="post" action={process.env.FORM_ENDPOINT}>
+              <label for="name"> What is your name?</label>
+              <input type="text" name="name" />
+              <label for="email"> What is your email address?</label>
+              <input type="email" name="email" />
               <button type="submit">Send</button>
-              <input type="reset" value="Clear" />
             </form>
           </div>
         </div>
