@@ -38,7 +38,7 @@ module.exports = {
           // `impressum`,
           // `kontakt`,
           // `konzept`,
-          // `leistungen`,
+          `leistungen`,
           // `prices`,
           // `reviews`,
         ],
