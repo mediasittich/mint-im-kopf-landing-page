@@ -10,42 +10,45 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
+function SEO({ lang, meta }) {
+  const data = useStaticQuery(graphql`
+    {
+      strapiSeo {
+        site_title
+        site_description
+        site_url
+        site_author {
+          username
+        }
+        site_img {
+          childImageSharp {
+            fluid {
+              src
+            }
           }
         }
       }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+    }
+  `)
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={data.strapiSeo.site_title}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: data.strapiSeo.site_description,
         },
         {
           property: `og:title`,
-          content: title,
+          content: data.strapiSeo.site_title,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: data.strapiSeo.site_description,
         },
         {
           property: `og:type`,
@@ -57,15 +60,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: data.strapiSeo.site_author.username,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: data.strapiSeo.site_title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: data.strapiSeo.site_description,
         },
       ].concat(meta)}
     />
@@ -73,7 +76,7 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `de`,
   meta: [],
   description: ``,
 }
