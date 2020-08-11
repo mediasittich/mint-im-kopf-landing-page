@@ -19,7 +19,7 @@ const IndexPage = () => (
     <FeaturesSection />
     <Pricing />
     <ReviewsSection />
-    {/* <ContactSection /> */}
+    <ContactSection />
   </Layout>
 )
 
