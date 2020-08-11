@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const Impressum = ({ data }) => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO lang="de" />
     <div className="container">
       <ReactMarkdown source={data.strapiImpressum.content} />
     </div>
