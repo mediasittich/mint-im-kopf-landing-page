@@ -22,8 +22,8 @@ function SEO({ lang, meta }) {
         }
         site_img {
           childImageSharp {
-            fluid {
-              src
+            fluid(maxWidth: 100, quality: 90) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
