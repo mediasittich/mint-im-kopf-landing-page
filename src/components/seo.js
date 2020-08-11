@@ -23,7 +23,7 @@ function SEO({ lang, meta }) {
         site_img {
           childImageSharp {
             fluid(maxWidth: 100, quality: 90) {
-              ...GatsbyImageSharpFluid
+              src
             }
           }
         }
@@ -69,6 +69,10 @@ function SEO({ lang, meta }) {
         {
           name: `twitter:description`,
           content: data.strapiSeo.site_description,
+        },
+        {
+          name: `twitter:image`,
+          content: data.strapiSeo.site_img.childImageSharp.fluid.src,
         },
       ].concat(meta)}
     />
