@@ -5,7 +5,14 @@ $pricing-font-weight: 300;
     background-color: $light-gray;
     font-weight: $pricing-font-weight;
 
-    .row {}
+    .prices-card-wrap {
+        justify-content: center;
+
+        & .card-container:nth-child(4) {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+    }
 
     .card {
         border: 0;

@@ -21,7 +21,10 @@ const Pricing = () => {
     // let priceStr = price.price.split(" ", 1)
     // console.log(price)
     return (
-      <div className="colg-xs-12 col-md-6 col-lg-3" key={price.id}>
+      <div
+        className="col-xs-12 col-md-6 col-lg-4 card-container"
+        key={price.id}
+      >
         <div className="card mb-5 text-center">
           <div className="card-header">
             <h3 className="display-2">
@@ -52,7 +55,7 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="row">{pricesList}</div>
+        <div className="row prices-card-wrap">{pricesList}</div>
         {/* <div className="card-deck">{pricesList}</div> */}
       </div>
     </section>
