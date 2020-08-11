@@ -11,3 +11,18 @@
 }
 
 // .section-title {}
+.cta {
+    padding: 9px 25px;
+    background-color: rgba(104, 186, 130, 1);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: $transition-all-nav;
+    margin-left: 20px;
+
+    &:hover {
+        background-color: rgba(104, 186, 130, .8);
+        color: white;
+    }
+}

@@ -1,30 +1,34 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-import { Container } from "react-bootstrap"
 
-import Logo from "./logo"
+import Logo from "../images/SylviaLogo.svg"
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <Container fluid>
-      <div className="d-flex align-items-center">
-        <div className="site-logo mr-auto w-25">
-          <Link to="/">
-            <Logo />
-          </Link>
-        </div>
-      </div>
-    </Container>
+const Header = () => (
+  <header className="site-navbar">
+    <Link className="logo-link" to="/">
+      <Logo className="logo" />
+    </Link>
+
+    <nav>
+      <ul className="nav-links">
+        <li>
+          <a href="#">Leistungen</a>
+        </li>
+        <li>
+          <a href="#">Über mich</a>
+        </li>
+        <li>
+          <a href="#">Lehrkonzept</a>
+        </li>
+        <li>
+          <a href="#">Preise</a>
+        </li>
+      </ul>
+    </nav>
+    <a className="btn cta" href="#">
+      Kontakt
+    </a>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

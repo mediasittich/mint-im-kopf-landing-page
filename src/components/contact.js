@@ -1,14 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ReactMarkdown from "react-markdown"
 
 const Contact = () => {
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLasttName] = useState("")
-
-  const handleSubmit = () => {
-    alert("Nachricht gesendet")
-  }
   const data = useStaticQuery(graphql`
     {
       strapiKontakt {
@@ -28,9 +22,10 @@ const Contact = () => {
           <div className="col-lg-7">
             <div className="text-center">
               <h2 className="section-title">{data.strapiKontakt.title}</h2>
-              <p className="mb-5">
-                <ReactMarkdown source={data.strapiKontakt.intro_text} />
-              </p>
+              <ReactMarkdown
+                className="mb-5"
+                source={data.strapiKontakt.intro_text}
+              />
             </div>
 
             <form action={`${process.env.GATSBY_FORM_ENDPOINT}`} method="POST">
@@ -54,33 +49,33 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              <div class="form-group">
-                <label for="inputPhone">Telefon</label>
+              <div className="form-group">
+                <label htmlFor="inputPhone">Telefon</label>
                 <input
                   type="text"
                   name="phone"
-                  class="form-control"
+                  className="form-control"
                   id="inputPhone"
                 />
               </div>
-              <div class="form-group">
-                <label for="inputEmail">Email</label>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">@</div>
+              <div className="form-group">
+                <label htmlFor="inputEmail">Email</label>
+                <div className="input-group">
+                  <div className="input-group-prepend">
+                    <div className="input-group-text">@</div>
                   </div>
                   <input
                     type="email"
                     name="email"
-                    class="form-control"
+                    className="form-control"
                     id="inputEmail"
                   />
                 </div>
               </div>
-              <div class="form-group">
-                <label for="textMessage">Ihre Nachricht</label>
+              <div className="form-group">
+                <label htmlFor="textMessage">Ihre Nachricht</label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="textMessage"
                   rows="5"
                 ></textarea>

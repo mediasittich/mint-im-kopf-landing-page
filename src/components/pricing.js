@@ -18,11 +18,11 @@ const Pricing = () => {
   `)
 
   const pricesList = data.strapiPrices.Price_tag.map(price => {
-    let priceStr = price.price.split(" ", 1)
+    // let priceStr = price.price.split(" ", 1)
     // console.log(price)
     return (
-      <div className="colg-xs-12 col-md-6 col-lg-3">
-        <div className="card mb-5 text-center" key={price.id}>
+      <div className="colg-xs-12 col-md-6 col-lg-3" key={price.id}>
+        <div className="card mb-5 text-center">
           <div className="card-header">
             <h3 className="display-2">
               <span className="currency">€</span>

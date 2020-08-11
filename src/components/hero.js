@@ -25,14 +25,16 @@ const Hero = () => {
       fluid={data.strapiHero.bg_img.childImageSharp.fluid}
       fadeIn
     >
-      <div fluid className="container-fluid hero-container">
+      <div className="container-fluid hero-container">
         <div className="container text-center">
           <div className="row">
             <div className="col col-lg-8 ml-auto mr-auto">
-              <p className="lead pb-5">
-                <ReactMarkdown source={data.strapiHero.intro_text} />
-              </p>
-              <a href="#" variant="primary" className="btn btn-primary btn-lg">
+              <ReactMarkdown
+                className="lead pb-5"
+                source={data.strapiHero.intro_text}
+              />
+
+              <a href="#" className="btn cta">
                 Learn more
               </a>
             </div>

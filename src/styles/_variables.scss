@@ -4,9 +4,11 @@ $theme-colors: ('primary': $mint-dark);
 $main-font: 'Roboto',
 sans-serif;
 $primary-color: $mint;
+$highlight-color: $mint;
 $light-gray: #f8f8f8;
 $main-font-color: #808080;
-
+$off-white: #ecf0f1;
+$dark-gray: #242529;
 
 $body-font-family: 'Roboto',
 sans-serif;
@@ -21,3 +23,4 @@ $font-weight-base: 300;
 $box-shadow: 0 3px 0px 0 rgba(0, 0, 0, .08);
 $box-shadow-hover: 0 20px 35px 0 rgba(0, 0, 0, .08);
 $transition-all: all .3s ease-in-out;
+$transition-all-nav: all .3s ease 0s;
