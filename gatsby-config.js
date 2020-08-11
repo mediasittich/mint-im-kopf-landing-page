@@ -33,7 +33,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         //If using single types place them in this array.
         singleTypes: [
-          // `about`,
+          `about`,
           `hero`,
           // `impressum`,
           // `kontakt`,

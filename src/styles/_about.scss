@@ -1,6 +1,14 @@
+#about-bg-img {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .about-section {}
 
-.bg-image {
+.about-bg-image {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -12,7 +20,7 @@
     }
 }
 
-.bg-image.overlay {
+.about-bg-image.overlay {
     position: relative;
 
     &::after {
