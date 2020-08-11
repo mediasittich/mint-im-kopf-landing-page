@@ -1,0 +1,37 @@
+.about-section {}
+
+.bg-image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    &>.container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.bg-image.overlay {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .7);
+    }
+}
+
+.quote {
+    &>blockquote {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: $off-white;
+    }
+}
