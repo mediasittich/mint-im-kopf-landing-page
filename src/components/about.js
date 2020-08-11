@@ -30,7 +30,7 @@ const About = () => {
   return (
     <BackgroundImage
       id="about-bg-img"
-      className="about-bg-image overlay bg-dark text-white"
+      // className="about-bg-image overlay bg-dark text-white"
       fluid={data.strapiAbout.bg_img.childImageSharp.fluid}
       fadeIn
     >

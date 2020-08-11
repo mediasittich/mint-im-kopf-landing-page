@@ -37,7 +37,7 @@ module.exports = {
           `hero`,
           // `impressum`,
           // `kontakt`,
-          // `konzept`,
+          `konzept`,
           `leistungen`,
           // `prices`,
           // `reviews`,
