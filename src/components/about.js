@@ -34,7 +34,7 @@ const About = () => {
       fluid={data.strapiAbout.bg_img.childImageSharp.fluid}
       fadeIn
     >
-      <section className="about-section site-section ">
+      <section id="about-section" className="about-section site-section ">
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="col-md-8 text-center quote">

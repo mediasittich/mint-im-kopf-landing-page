@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import Logo from "../images/SylviaLogo.svg"
+import PageLinks from "../constants/pageLinks"
 
 const Header = () => (
   <header className="site-navbar">
@@ -10,24 +11,8 @@ const Header = () => (
     </Link>
 
     <nav>
-      <ul className="nav-links">
-        <li>
-          <a href="#">Leistungen</a>
-        </li>
-        <li>
-          <a href="#">Über mich</a>
-        </li>
-        <li>
-          <a href="#">Lehrkonzept</a>
-        </li>
-        <li>
-          <a href="#">Preise</a>
-        </li>
-      </ul>
+      <PageLinks />
     </nav>
-    <a className="btn cta" href="#">
-      Kontakt
-    </a>
   </header>
 )
 

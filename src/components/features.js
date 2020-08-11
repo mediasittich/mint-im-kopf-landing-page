@@ -50,7 +50,7 @@ const Features = () => {
     )
   })
   return (
-    <section className="features-section site-section">
+    <section id="features-section" className="features-section site-section">
       <div className="container">
         <div className="row mb-5 justify-content-center aos-init">
           <div className="col-lg-7 text-center">
