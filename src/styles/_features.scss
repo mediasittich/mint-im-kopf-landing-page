@@ -1,0 +1,33 @@
+.features-section {}
+
+.features-list-box {
+    box-shadow: $box-shadow-lg;
+}
+
+.custom-icon-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.custom-icon-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $primary-color;
+
+    &>svg {
+        display: inline-block;
+        color: white;
+    }
+}
+
+.list-item-text {
+    &>p {
+        margin-bottom: 0;
+    }
+}

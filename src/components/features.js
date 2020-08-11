@@ -38,7 +38,7 @@ const Features = () => {
           </span>
         </div>
         <div>
-          <span className="m-0">
+          <span className="m-0 list-item-text">
             <ReactMarkdown source={feature.content} />
           </span>
         </div>
@@ -46,7 +46,7 @@ const Features = () => {
     )
   })
   return (
-    <div className="site-section">
+    <section className="features-section site-section">
       <div className="container">
         <div className="row mb-5 justify-content-center aos-init">
           <div className="col-lg-7 text-center">
@@ -54,10 +54,10 @@ const Features = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4 ml-auto align-self-start aos-init">
-            <div className="p-4 rounded bg-white why-choose-us-box">{list}</div>
+          <div className="col-lg-6 ml-auto align-self-start aos-init">
+            <div className="p-4 rounded bg-white features-list-box">{list}</div>
           </div>
-          <div className="col-lg-7 align-self-end aos-init">
+          <div className="col-lg-5 align-self-end mt-5 mt-lg-0 aos-init">
             <Img
               fluid={data.strapiKonzept.feature_img.childImageSharp.fluid}
               className="img-fluid"
@@ -65,7 +65,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
