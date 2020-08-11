@@ -7,11 +7,16 @@ const Hero = () => {
   const data = useStaticQuery(graphql`
     {
       strapiHero {
-        titel
-        intro_text
+        section_title
+        description
+        cta {
+          id
+          title
+          ref
+        }
         bg_img {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 80) {
+            fluid(maxWidth: 1920, quality: 60) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -19,6 +24,7 @@ const Hero = () => {
       }
     }
   `)
+
   return (
     <BackgroundImage
       id="hero-bg-img"
@@ -31,12 +37,15 @@ const Hero = () => {
             <div className="col col-lg-8 ml-auto mr-auto">
               <ReactMarkdown
                 className="lead pb-5"
-                source={data.strapiHero.intro_text}
+                source={data.strapiHero.description}
               />
-
-              <a href="#" className="btn cta">
-                Learn more
-              </a>
+              {data.strapiHero.cta.map(btn => {
+                return (
+                  <a href={`${btn.ref}`} className="btn cta">
+                    {btn.title}
+                  </a>
+                )
+              })}
             </div>
           </div>
         </div>

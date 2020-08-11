@@ -9,16 +9,16 @@ const Impressum = ({ data }) => (
   <Layout>
     <SEO title="Page two" />
     <div className="container">
-      <ReactMarkdown source={data.strapiImpressum.content} />
+      {/* <ReactMarkdown source={data.strapiImpressum.content} /> */}
     </div>
   </Layout>
 )
-export const query = graphql`
-  {
-    strapiImpressum {
-      content
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     strapiImpressum {
+//       content
+//     }
+//   }
+// `
 
 export default Impressum

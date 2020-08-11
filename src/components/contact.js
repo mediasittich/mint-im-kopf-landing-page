@@ -3,21 +3,21 @@ import { graphql, useStaticQuery } from "gatsby"
 import ReactMarkdown from "react-markdown"
 
 const Contact = () => {
-  const data = useStaticQuery(graphql`
-    {
-      strapiKontakt {
-        title
-        intro_text
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     strapiKontakt {
+  //       title
+  //       intro_text
+  //     }
+  //   }
+  // `)
 
   return (
     <section
       className="contact-section site-section bg-light"
       style={{ padding: "4em 0" }}
     >
-      <div className="container">
+      {/* <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-7">
             <div className="text-center">
@@ -90,7 +90,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }
