@@ -40,7 +40,7 @@ module.exports = {
           `konzept`,
           `leistungen`,
           `pricing`,
-          // `reviews`,
+          `reviews`,
         ],
       },
     },
