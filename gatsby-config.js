@@ -11,9 +11,13 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Mint im Kopf`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: "Mint im Kopf",
+    titleTemplate: "Mint im Kopf · Nachhilfe",
+    description:
+      "Tolle Nachhilfe in Mathe, Physik und Chemie für alle Schularten und Jahrgänge",
+    url: "https://mint-im-kopf.de", // No trailing slash allowed!
+    image: "/images/Logo_small.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
