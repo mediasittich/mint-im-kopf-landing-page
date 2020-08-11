@@ -82,6 +82,7 @@ const Contact = () => {
               <div className="form-group">
                 <label htmlFor="textMessage">Ihre Nachricht</label>
                 <textarea
+                  name="textMessage"
                   className="form-control"
                   id="textMessage"
                   rows="5"
