@@ -1,19 +1,27 @@
 import React from "react"
-import { Container, Row, Col } from "react-bootstrap"
+import { Link } from "gatsby"
 
 const Footer = () => {
   return (
     <footer className="footer-section">
-      <Container>
-        <Row className="pt-5 mt-5 text-center">
-          <Col md={12} className="pt-5">
-            <p>
+      <div className="container">
+        <div className="d-flex justify-content-center pt-5 pb-5">
+          <p className="mb-0">
+            <span className="footer-item">
               &copy; {new Date().getFullYear()}{" "}
               <a href="https://www.mint-im-kopf.de">Mint im Kopf</a>
-            </p>
-          </Col>
-        </Row>
-      </Container>
+            </span>
+            |
+            <span className="footer-item">
+              <Link to="/impressum">Impressum</Link>
+            </span>
+            |
+            <span className="footer-item">
+              <Link to="/gdpr">Datenschutzerklärung</Link>
+            </span>
+          </p>
+        </div>
+      </div>
     </footer>
   )
 }
