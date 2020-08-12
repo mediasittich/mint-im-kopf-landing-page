@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import ReactMarkdown from "react-markdown"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -41,9 +42,9 @@ const Hero = () => {
               />
               {data.strapiHero.cta.map(btn => {
                 return (
-                  <a href={`${btn.ref}`} className="btn cta px-5 py-3">
+                  <AnchorLink to={btn.ref} className="btn cta px-5 py-3">
                     {btn.title}
-                  </a>
+                  </AnchorLink>
                 )
               })}
             </div>
