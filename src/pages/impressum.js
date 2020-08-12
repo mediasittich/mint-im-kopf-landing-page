@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 const Impressum = ({ data }) => (
   <Layout>
     <SEO lang="de" />
-    <div className="container">
+    <div className="container py-5 my-2">
       <ReactMarkdown source={data.strapiImpressum.content} />
     </div>
   </Layout>
