@@ -55,7 +55,7 @@ const Features = () => {
         <div
           className="row mb-5 justify-content-center"
           data-sal="slide-up"
-          data-sal-duration="800"
+          data-sal-duration="400"
           data-sal-delay="0"
           data-sal-easing="ease"
         >
@@ -69,8 +69,8 @@ const Features = () => {
           <div
             className="col-lg-6 ml-auto align-self-start"
             data-sal="slide-up"
-            data-sal-duration="800"
-            data-sal-delay="100"
+            data-sal-duration="400"
+            data-sal-delay="50"
             data-sal-easing="ease"
           >
             <div className="p-4 rounded bg-white features-list-box">{list}</div>
@@ -78,8 +78,8 @@ const Features = () => {
           <div
             className="col-lg-5 align-self-end mt-5 mt-lg-0"
             data-sal="slide-left"
-            data-sal-duration="800"
-            data-sal-delay="200"
+            data-sal-duration="400"
+            data-sal-delay="100"
             data-sal-easing="ease"
           >
             <Img

@@ -40,7 +40,7 @@ const Contact = () => {
               action={`${data.strapiKontakt.form_url}`}
               method="POST"
               data-sal="fade"
-              data-sal-duration="800"
+              data-sal-duration="400"
               data-sal-delay="0"
               data-sal-easing="ease"
             >

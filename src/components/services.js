@@ -59,8 +59,8 @@ const Services = () => {
           <div
             className="col-lg-7 mb-5 list-group-image"
             data-sal="slide-up"
-            data-sal-duration="800"
-            data-sal-delay="100"
+            data-sal-duration="400"
+            data-sal-delay="50"
             data-sal-easing="ease"
           >
             <Img
@@ -71,8 +71,8 @@ const Services = () => {
           <div
             className="col-lg-4 ml-auto list-group-text"
             data-sal="slide-up"
-            data-sal-duration="800"
-            data-sal-delay="200"
+            data-sal-duration="400"
+            data-sal-delay="100"
             data-sal-easing="ease"
           >
             <h2 className="text-black mb-4">{group.title}</h2>
@@ -90,7 +90,7 @@ const Services = () => {
           <div
             className="col-lg-7 text-center"
             data-sal="slide-up"
-            data-sal-duration="800"
+            data-sal-duration="400"
             data-sal-delay="0"
             data-sal-easing="ease"
           >
