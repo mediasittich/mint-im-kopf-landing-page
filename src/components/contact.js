@@ -89,9 +89,9 @@ const Contact = () => {
                   rows="5"
                 ></textarea>
               </div>
-              <div className="form-group row">
-                <div className="col-sm-10">
-                  <button className="btn btn-primary" type="submit">
+              <div className="form-group row justify-content-center mt-4">
+                <div>
+                  <button className="btn cta" type="submit">
                     Anfrage absenden
                   </button>
                 </div>
