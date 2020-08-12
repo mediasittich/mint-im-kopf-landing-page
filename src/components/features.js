@@ -27,11 +27,23 @@ const Features = () => {
 
   const list = data.strapiKonzept.features_list_item.map(feature => {
     return (
-      <div
-        className="d-flex custom-icon-wrap custom-icon-light mb-3"
+      <li
+        className="d-flex custom-icon-wrap custom-icon-light mb-4"
         key={feature.id}
       >
-        <div className="mr-3">
+        <span className="custom-icon-inner">
+          <FiCheck />
+        </span>
+        <div className="m-0 ml-4 list-item-text">
+          <p>{feature.title}</p>
+          {feature.description ? (
+            <ReactMarkdown source={feature.description} />
+          ) : (
+            ""
+          )}
+        </div>
+
+        {/* <div className="mr-3">
           <span className="custom-icon-inner">
             <FiCheck />
           </span>
@@ -45,8 +57,8 @@ const Features = () => {
               ""
             )}
           </span>
-        </div>
-      </div>
+        </div> */}
+      </li>
     )
   })
   return (
@@ -61,7 +73,7 @@ const Features = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 ml-auto align-self-start">
-            <div className="p-4 rounded bg-white features-list-box">{list}</div>
+            <ul className="p-4 rounded bg-white features-list-box">{list}</ul>
           </div>
           <div className="col-lg-5 align-self-end mt-5 mt-lg-0">
             <Img
