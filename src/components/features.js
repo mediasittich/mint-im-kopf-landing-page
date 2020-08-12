@@ -28,7 +28,7 @@ const Features = () => {
   const list = data.strapiKonzept.features_list_item.map(feature => {
     return (
       <div
-        className="d-flex align-items-center custom-icon-wrap custom-icon-light mb-3"
+        className="d-flex custom-icon-wrap custom-icon-light mb-3"
         key={feature.id}
       >
         <div className="mr-3">
