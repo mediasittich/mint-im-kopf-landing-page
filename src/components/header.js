@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { FaAlignRight } from "react-icons/fa"
 
 import Logo from "../images/SylviaLogo.svg"
 import PageLinks from "../constants/pageLinks"
@@ -9,8 +10,11 @@ const Header = () => (
     <Link className="logo-link" to="/">
       <Logo className="logo" />
     </Link>
-
-    <nav>
+    {/* <button type="button" className="toggle-btn" onClick={toggleSidebar}> */}
+    <button type="button" className="toggle-btn d-lg-none">
+      <FaAlignRight></FaAlignRight>
+    </button>
+    <nav className="d-none d-lg-inline-block">
       <PageLinks />
     </nav>
   </header>
