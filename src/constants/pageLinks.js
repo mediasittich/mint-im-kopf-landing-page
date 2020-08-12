@@ -5,6 +5,11 @@ import { Navbar, Nav } from "react-bootstrap"
 const DATA = [
   {
     id: 1,
+    text: "Home",
+    url: "/",
+  },
+  {
+    id: 2,
     text: "Leistungen",
     url: "/#services-section",
   },
@@ -14,12 +19,12 @@ const DATA = [
     url: "/#about-section",
   },
   {
-    id: 3,
+    id: 4,
     text: "Lehrkonzept",
     url: "/#features-section",
   },
   {
-    id: 3,
+    id: 5,
     text: "Preise",
     url: "/#pricing-section",
   },
