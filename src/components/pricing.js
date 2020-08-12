@@ -31,7 +31,7 @@ const Pricing = () => {
             <h3 className="display-2">
               <span className="currency">€</span>
               <span className="price">{item.price}</span>
-              <span className="unit">/{item.unit}</span>
+              <span className="unit"> /{item.unit}</span>
             </h3>
           </div>
           <div className="card-body pt-0">
@@ -45,8 +45,6 @@ const Pricing = () => {
                 )
               })}
             </ul>
-
-            {/* <ReactMarkdown source={price.description} /> */}
           </div>
         </div>
       </div>
@@ -64,7 +62,6 @@ const Pricing = () => {
         </div>
 
         <div className="row prices-card-wrap">{pricesList}</div>
-        {/* <div className="card-deck">{pricesList}</div> */}
       </div>
     </section>
   )
