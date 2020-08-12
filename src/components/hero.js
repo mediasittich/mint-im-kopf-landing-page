@@ -41,7 +41,7 @@ const Hero = () => {
               />
               {data.strapiHero.cta.map(btn => {
                 return (
-                  <a href={`${btn.ref}`} className="btn cta">
+                  <a href={`${btn.ref}`} className="btn cta px-5 py-3">
                     {btn.title}
                   </a>
                 )

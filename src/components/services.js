@@ -41,9 +41,9 @@ const Services = () => {
           <span className="custom-icon-inner mr-3">
             <FiCheck />
           </span>
-          <div>
+          <div className="list-item">
             <strong className="m-0">{item.title}</strong>
-            <ReactMarkdown source={item.description} />
+            {item.description && <ReactMarkdown source={item.description} />}
           </div>
         </div>
       )
@@ -72,7 +72,7 @@ const Services = () => {
     })
 
   return (
-    <div className="site-section" id="services-section">
+    <div className="site-section services-section" id="services-section">
       <div className="container">
         <div className="row mb-5 justify-content-center">
           <div className="col-lg-7 text-center">
