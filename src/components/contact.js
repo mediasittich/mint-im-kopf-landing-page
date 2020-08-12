@@ -36,14 +36,7 @@ const Contact = () => {
               <p>{data.strapiKontakt.phone}</p>
             </div>
 
-            <form
-              action={`${data.strapiKontakt.form_url}`}
-              method="POST"
-              data-sal="fade"
-              data-sal-duration="400"
-              data-sal-delay="0"
-              data-sal-easing="ease"
-            >
+            <form action={`${data.strapiKontakt.form_url}`} method="POST">
               <div className="form-row">
                 <div className="form-group col-md-6">
                   <label htmlFor="inputLastName">Name</label>

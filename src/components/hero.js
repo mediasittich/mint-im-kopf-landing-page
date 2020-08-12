@@ -31,7 +31,7 @@ const Hero = () => {
       fluid={data.strapiHero.bg_img.childImageSharp.fluid}
       fadeIn
     >
-      <div className="container-fluid hero-container">
+      <div id="hero-section" className="container-fluid hero-container">
         <div className="container text-center">
           <div className="row">
             <div className="col col-lg-8 ml-auto mr-auto">

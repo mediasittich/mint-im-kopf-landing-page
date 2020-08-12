@@ -56,25 +56,13 @@ const Services = () => {
           className="row mb-5 align-items-center list-group-block"
           key={group.id}
         >
-          <div
-            className="col-lg-7 mb-5 list-group-image"
-            data-sal="slide-up"
-            data-sal-duration="400"
-            data-sal-delay="50"
-            data-sal-easing="ease"
-          >
+          <div className="col-lg-7 mb-5 list-group-image">
             <Img
               fluid={group.group_img.childImageSharp.fluid}
               className="img-fluid"
             />
           </div>
-          <div
-            className="col-lg-4 ml-auto list-group-text"
-            data-sal="slide-up"
-            data-sal-duration="400"
-            data-sal-delay="100"
-            data-sal-easing="ease"
-          >
+          <div className="col-lg-4 ml-auto list-group-text">
             <h2 className="text-black mb-4">{group.title}</h2>
             <p className="mb-4">{group.description}</p>
             {listGroupItems(group.list_group_item)}
@@ -87,13 +75,7 @@ const Services = () => {
     <div className="site-section" id="services-section">
       <div className="container">
         <div className="row mb-5 justify-content-center">
-          <div
-            className="col-lg-7 text-center"
-            data-sal="slide-up"
-            data-sal-duration="400"
-            data-sal-delay="0"
-            data-sal-easing="ease"
-          >
+          <div className="col-lg-7 text-center">
             <h2 className="section-title">
               {data.strapiLeistungen.section_title}
             </h2>

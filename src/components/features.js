@@ -52,13 +52,7 @@ const Features = () => {
   return (
     <section id="features-section" className="features-section site-section">
       <div className="container">
-        <div
-          className="row mb-5 justify-content-center"
-          data-sal="slide-up"
-          data-sal-duration="400"
-          data-sal-delay="0"
-          data-sal-easing="ease"
-        >
+        <div className="row mb-5 justify-content-center">
           <div className="col-lg-7 text-center">
             <h2 className="section-title">
               {data.strapiKonzept.section_title}
@@ -66,22 +60,10 @@ const Features = () => {
           </div>
         </div>
         <div className="row">
-          <div
-            className="col-lg-6 ml-auto align-self-start"
-            data-sal="slide-up"
-            data-sal-duration="400"
-            data-sal-delay="50"
-            data-sal-easing="ease"
-          >
+          <div className="col-lg-6 ml-auto align-self-start">
             <div className="p-4 rounded bg-white features-list-box">{list}</div>
           </div>
-          <div
-            className="col-lg-5 align-self-end mt-5 mt-lg-0"
-            data-sal="slide-left"
-            data-sal-duration="400"
-            data-sal-delay="100"
-            data-sal-easing="ease"
-          >
+          <div className="col-lg-5 align-self-end mt-5 mt-lg-0">
             <Img
               fluid={data.strapiKonzept.feature_img.childImageSharp.fluid}
               className="img-fluid"
