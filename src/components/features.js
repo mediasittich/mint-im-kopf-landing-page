@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FiCheck } from "react-icons/fi"
 import ReactMarkdown from "react-markdown"
+import Fade from "react-reveal/Fade"
 
 const Features = () => {
   const data = useStaticQuery(graphql`
@@ -35,12 +36,14 @@ const Features = () => {
           <FiCheck />
         </span>
         <div className="m-0 ml-4 list-item-text">
-          <p>{feature.title}</p>
-          {feature.description ? (
-            <ReactMarkdown source={feature.description} />
-          ) : (
-            ""
-          )}
+          <div>
+            <p>{feature.title}</p>
+            {feature.description ? (
+              <ReactMarkdown source={feature.description} />
+            ) : (
+              ""
+            )}
+          </div>
         </div>
 
         {/* <div className="mr-3">
@@ -66,21 +69,27 @@ const Features = () => {
       <div className="container">
         <div className="row mb-5 justify-content-center">
           <div className="col-lg-7 text-center">
-            <h2 className="section-title">
-              {data.strapiKonzept.section_title}
-            </h2>
+            <Fade bottom>
+              <h2 className="section-title">
+                {data.strapiKonzept.section_title}
+              </h2>
+            </Fade>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-6 ml-auto align-self-start">
-            <ul className="p-4 rounded bg-white features-list-box">{list}</ul>
-          </div>
-          <div className="col-lg-5 align-self-end mt-5 mt-lg-0">
-            <Img
-              fluid={data.strapiKonzept.feature_img.childImageSharp.fluid}
-              className="img-fluid feature-img"
-            />
-          </div>
+          <Fade bottom>
+            <div className="col-lg-6 ml-auto align-self-start">
+              <ul className="p-4 rounded bg-white features-list-box">{list}</ul>
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="col-lg-5 align-self-end mt-5 mt-lg-0">
+              <Img
+                fluid={data.strapiKonzept.feature_img.childImageSharp.fluid}
+                className="img-fluid feature-img"
+              />
+            </div>
+          </Fade>
         </div>
       </div>
     </section>
