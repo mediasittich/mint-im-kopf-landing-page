@@ -9,13 +9,13 @@ const GDPR = ({ data }) => (
   <Layout>
     <SEO lang="de" />
     <div className="container">
-      <ReactMarkdown source={data.strapiImpressum.content} />
+      <ReactMarkdown source={data.strapiGdpr.content} />
     </div>
   </Layout>
 )
 export const query = graphql`
   {
-    strapiImpressum {
+    strapiGdpr {
       content
     }
   }
