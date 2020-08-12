@@ -8,5 +8,3 @@
 
 import "./node_modules/slick-carousel/slick/slick.css"
 import "./node_modules/slick-carousel/slick/slick-theme.css"
-import "./node_modules/sal.js/dist/sal.css"
-import "./node_modules/aos/dist/aos.css"

@@ -1,6 +1,5 @@
 import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import { Navbar, Nav } from "react-bootstrap"
 
 const DATA = [
   {
