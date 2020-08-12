@@ -11,7 +11,7 @@ const Features = () => {
         section_title
         feature_img {
           childImageSharp {
-            fluid(maxWidth: 400, quality: 70) {
+            fluid(maxWidth: 900, quality: 70) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -66,7 +66,7 @@ const Features = () => {
           <div className="col-lg-5 align-self-end mt-5 mt-lg-0">
             <Img
               fluid={data.strapiKonzept.feature_img.childImageSharp.fluid}
-              className="img-fluid"
+              className="img-fluid feature-img"
             />
           </div>
         </div>

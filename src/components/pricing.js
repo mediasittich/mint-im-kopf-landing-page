@@ -31,7 +31,8 @@ const Pricing = () => {
             <h3 className="display-2">
               <span className="currency">€</span>
               <span className="price">{item.price}</span>
-              <span className="unit"> /{item.unit}</span>
+
+              <p className="unit">pro {item.unit}</p>
             </h3>
           </div>
           <div className="card-body pt-0">
