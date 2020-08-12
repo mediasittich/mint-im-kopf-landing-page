@@ -12,7 +12,7 @@ const About = () => {
         profile_img {
           childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -34,10 +34,10 @@ const About = () => {
       fluid={data.strapiAbout.bg_img.childImageSharp.fluid}
       fadeIn
     >
-      <section id="about-section" className="about-section site-section ">
+      <section id="about-section" className="overlay">
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-8 text-center quote">
+            <div className="col-md-8 text-center py-5 quote">
               <h3 className="mb-4">{data.strapiAbout.section_title}</h3>
               <Img
                 fluid={data.strapiAbout.profile_img.childImageSharp.fluid}
