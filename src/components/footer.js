@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-section">
       <div className="container">
         <div className="d-flex justify-content-center pt-5 pb-5">
-          <p className="mb-0">
+          <p className="mb-0 footer-items">
             <span className="footer-item">
               &copy; {new Date().getFullYear()}{" "}
               <a href="https://www.mint-im-kopf.de">Mint im Kopf</a>

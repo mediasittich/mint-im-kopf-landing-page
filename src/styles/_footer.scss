@@ -1,5 +1,13 @@
 .footer-section {
+    .footer-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .footer-item {
+        white-space: nowrap;
+
         &:nth-child(1) {
             padding-right: 10px;
         }
