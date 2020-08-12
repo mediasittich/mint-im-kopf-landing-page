@@ -89,9 +89,11 @@ const Testimonials = () => {
             </h2>
           </div>
         </div>
-        <Slider ref={slider => (reviewsSlider = slider)} {...settings}>
-          {reviewsList}
-        </Slider>
+        <div className="slider-container">
+          <Slider ref={slider => (reviewsSlider = slider)} {...settings}>
+            {reviewsList}
+          </Slider>
+        </div>
       </div>
     </div>
   )
