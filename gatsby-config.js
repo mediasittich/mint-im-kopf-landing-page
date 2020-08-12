@@ -44,6 +44,7 @@ module.exports = {
           `pricing`,
           `reviews`,
           `seo`,
+          `gdpr`,
         ],
       },
     },
