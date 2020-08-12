@@ -23,7 +23,7 @@ const Contact = () => {
     >
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-7">
+          <div className="col-md-7">
             <div className="text-center">
               <h2 className="section-title">
                 {data.strapiKontakt.section_title}
@@ -36,7 +36,14 @@ const Contact = () => {
               <p>{data.strapiKontakt.phone}</p>
             </div>
 
-            <form action={`${data.strapiKontakt.form_url}`} method="POST">
+            <form
+              action={`${data.strapiKontakt.form_url}`}
+              method="POST"
+              data-sal="fade"
+              data-sal-duration="800"
+              data-sal-delay="0"
+              data-sal-easing="ease"
+            >
               <div className="form-row">
                 <div className="form-group col-md-6">
                   <label htmlFor="inputLastName">Name</label>
