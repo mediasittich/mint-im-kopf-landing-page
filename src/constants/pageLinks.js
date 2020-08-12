@@ -1,5 +1,6 @@
 import React from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { Navbar, Nav } from "react-bootstrap"
 
 const DATA = [
   {
@@ -26,19 +27,19 @@ const DATA = [
 
 const LINKS = DATA.map(link => {
   return (
-    <li key={link.id}>
-      <AnchorLink to={link.url}>{link.text}</AnchorLink>
-    </li>
+    <AnchorLink key={link.id} className="nav-link" to={link.url}>
+      {link.text}
+    </AnchorLink>
   )
 })
 
 export default ({ styleClass }) => {
   return (
-    <ul className={`nav-links ${styleClass ? styleClass : ""}`}>
+    <>
       {LINKS}
-      <AnchorLink className="btn cta" to="/#contact-section">
+      <AnchorLink className="btn cta ml-4" to="/#contact-section">
         Kontakt
       </AnchorLink>
-    </ul>
+    </>
   )
 }

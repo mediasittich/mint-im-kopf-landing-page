@@ -65,7 +65,7 @@ const Services = () => {
           </div>
           <div className="col-lg-4 ml-auto list-group-text">
             <h2 className="text-black mb-4">{group.title}</h2>
-            <p className="mb-4">{group.description}</p>
+            <ReactMarkdown className="mb-4">{group.description}</ReactMarkdown>
             {listGroupItems(group.list_group_item)}
           </div>
         </div>
@@ -78,10 +78,16 @@ const Services = () => {
         <div className="row mb-5 justify-content-center">
           <div className="col-lg-7 text-center">
             <Fade bottom cascade>
-              <h2 className="section-title">
-                {data.strapiLeistungen.section_title}
-              </h2>
-              <p>{data.strapiLeistungen.description}</p>
+              <div>
+                <h2 className="section-title">
+                  {data.strapiLeistungen.section_title}
+                </h2>
+              </div>
+              <div>
+                <ReactMarkdown>
+                  {data.strapiLeistungen.description}
+                </ReactMarkdown>
+              </div>
             </Fade>
           </div>
         </div>
