@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FiCheck } from "react-icons/fi"
 import ReactMarkdown from "react-markdown"
+import Fade from "react-reveal/Fade"
 
 const Services = () => {
   const data = useStaticQuery(graphql`
@@ -76,13 +77,17 @@ const Services = () => {
       <div className="container">
         <div className="row mb-5 justify-content-center">
           <div className="col-lg-7 text-center">
-            <h2 className="section-title">
-              {data.strapiLeistungen.section_title}
-            </h2>
-            <p>{data.strapiLeistungen.description}</p>
+            <Fade bottom cascade>
+              <h2 className="section-title">
+                {data.strapiLeistungen.section_title}
+              </h2>
+              <p>{data.strapiLeistungen.description}</p>
+            </Fade>
           </div>
         </div>
-        <div>{listGroup()}</div>
+        <Fade bottom cascade>
+          {listGroup()}
+        </Fade>
       </div>
     </div>
   )
