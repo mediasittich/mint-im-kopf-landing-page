@@ -20,6 +20,10 @@
 // }
 
 .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+
     &>.navbar-collapse {
         flex-grow: initial;
     }
@@ -38,7 +42,6 @@
     cursor: pointer;
     height: 100%;
     max-height: 80px;
-    margin-right: auto;
 }
 
 .logo {
@@ -47,11 +50,19 @@
     max-height: 80px;
 }
 
+.navbar-toggler {
+    @extend .d-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    // border-top: 1px solid $highlight-color !important;
+}
+
 .toggle-icon {
     display: inline-block;
     margin: 5px 5px;
-    width: 2rem;
-    height: 2rem;
+    // width: 2rem;
+    // height: 2rem;
 }
 
 .nav-link {

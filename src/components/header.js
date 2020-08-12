@@ -19,14 +19,17 @@ const Header = () => {
     <header>
       <Navbar collapseOnSelect expand="lg" bg="white" variant="primary">
         {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
-        <Link className="logo-link" to="/">
+        <Link className="logo-link my-3" to="/">
           <Logo className="logo" />
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav">
           <FiMenu className="toggle-icon text-primary" />
+          {/* <span className="toggle-icon text-primary text-uppercase font-weight-bolder py-2">
+            Menü
+          </span> */}
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto py-3 py-lg-0">
+          <Nav className="mr-auto py-3 mb-3 m-lg-0 py-lg-0">
             <PageLinks />
             {/* <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>

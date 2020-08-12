@@ -27,7 +27,7 @@ const DATA = [
 
 const LINKS = DATA.map(link => {
   return (
-    <AnchorLink key={link.id} className="nav-link" to={link.url}>
+    <AnchorLink key={link.id} className="nav-link my-2 my-lg-0" to={link.url}>
       {link.text}
     </AnchorLink>
   )
@@ -37,7 +37,10 @@ export default ({ styleClass }) => {
   return (
     <>
       {LINKS}
-      <AnchorLink className="btn cta ml-4" to="/#contact-section">
+      <AnchorLink
+        className="btn cta ml-lg-4 my-2 my-lg-0"
+        to="/#contact-section"
+      >
         Kontakt
       </AnchorLink>
     </>
