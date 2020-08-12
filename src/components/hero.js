@@ -37,7 +37,7 @@ const Hero = () => {
           <div className="row">
             <div className="col col-lg-8 ml-auto mr-auto">
               <ReactMarkdown
-                className="lead pb-5"
+                className="lead pb-2 pb-sm-5 mt-n4 mt-sm-0"
                 source={data.strapiHero.description}
               />
               {data.strapiHero.cta.map(btn => {
