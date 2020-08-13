@@ -15,7 +15,8 @@ module.exports = {
     titleTemplate: "Mint im Kopf · Nachhilfe",
     description:
       "Tolle Nachhilfe in Mathe, Physik und Chemie für alle Schularten und Jahrgänge",
-    url: "https://mint-im-kopf.de", // No trailing slash allowed!
+    url: "https://www.mint-im-kopf.de", // No trailing slash allowed!
+    siteUrl: "https://www.mint-im-kopf.de", // No trailing slash allowed!
     image: "/images/Logo_small.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "",
   },
@@ -95,6 +96,17 @@ module.exports = {
         theme_color: `#68ba82`,
         display: `minimal-ui`,
         icon: `src/images/mint-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-175289342-1",
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // other options
+        anonymize: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
