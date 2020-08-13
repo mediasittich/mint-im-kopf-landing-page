@@ -12,9 +12,10 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Mint im Kopf",
-    titleTemplate: "Mint im Kopf · Nachhilfe",
+    titleTemplate:
+      "Mint im Kopf · Professionelle Nachhilfe in Mathe, Physik und Chemie in München",
     description:
-      "Tolle Nachhilfe in Mathe, Physik und Chemie für alle Schularten und Jahrgänge",
+      "Mint im Kopf · Professionelle Nachhilfe in Mathe, Physik und Chemie in München",
     url: "https://www.mint-im-kopf.de", // No trailing slash allowed!
     siteUrl: "https://www.mint-im-kopf.de", // No trailing slash allowed!
     image: "/images/Logo_small.png", // Path to your image you placed in the 'static' folder
@@ -89,7 +90,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mint im Kopf - Nachhilfe`,
+        name: `Mint im Kopf · Professionelle Nachhilfe in Mathe, Physik und Chemie in München`,
         short_name: `Mint im Kopf`,
         start_url: `/`,
         background_color: `#68ba82`,
