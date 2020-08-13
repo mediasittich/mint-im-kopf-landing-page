@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import ReactMarkdown from "react-markdown"
 
 const Pricing = () => {
   const data = useStaticQuery(graphql`
@@ -22,8 +21,6 @@ const Pricing = () => {
   `)
 
   const pricesList = data.strapiPricing.pricing_list_item.map(item => {
-    // let priceStr = price.price.split(" ", 1)
-    // console.log(price)
     return (
       <div className="col-xs-12 col-md-6 col-lg-4 card-container" key={item.id}>
         <div className="card mb-5 text-center">
