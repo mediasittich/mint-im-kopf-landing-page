@@ -64,7 +64,7 @@ const Services = () => {
             />
           </div>
           <div className="col-lg-4 ml-auto list-group-text">
-            <h2 className="text-black mb-4">{group.title}</h2>
+            <h3 className="text-black mb-4">{group.title}</h3>
             <ReactMarkdown className="mb-4">{group.description}</ReactMarkdown>
             {listGroupItems(group.list_group_item)}
           </div>
