@@ -11,10 +11,13 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import Modal from "./modal"
+import useModal from "../hooks/useModal"
 
 import "../styles/main.scss"
 
 const Layout = ({ children }) => {
+  const { isShowing, hideModal } = useModal()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,6 +35,7 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <Footer />
+      {isShowing ? <Modal isShowing={isShowing} hide={hideModal} /> : null}
     </>
   )
 }
