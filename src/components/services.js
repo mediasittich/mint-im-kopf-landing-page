@@ -35,10 +35,7 @@ const Services = () => {
   const listGroupItems = items =>
     items.map(item => {
       return (
-        <div
-          className="d-flex align-items-center custom-icon-wrap mb-3"
-          key={item.id}
-        >
+        <div className="d-flex custom-icon-wrap mb-4" key={item.id}>
           <span className="custom-icon-inner mr-3">
             <FiCheck />
           </span>
