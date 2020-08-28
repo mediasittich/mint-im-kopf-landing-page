@@ -25,16 +25,21 @@ const Contact = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-7">
-            <div className="text-center">
+            <div className="text-center mb-5">
               <h2 className="section-title">
                 {data.strapiKontakt.section_title}
               </h2>
               <ReactMarkdown
-                className="mb-5"
+                className="mb-4"
                 source={data.strapiKontakt.description}
               />
-              <p>{data.strapiKontakt.email}</p>
-              <p>{data.strapiKontakt.phone}</p>
+              <p>
+                <strong>{data.strapiKontakt.email}</strong>
+              </p>
+
+              <p>
+                <strong>{data.strapiKontakt.phone}</strong>
+              </p>
             </div>
 
             <Form data={data} />
