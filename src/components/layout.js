@@ -7,19 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import CookieConsent from "react-cookie-consent"
 
 import Header from "./header"
 import Footer from "./footer"
-import Modal from "./modal"
-import useModal from "../hooks/useModal"
 
 import "../styles/main.scss"
 
 const Layout = ({ children }) => {
-  const { isShowing, hideModal } = useModal()
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    {
       site {
         siteMetadata {
           title
@@ -35,7 +33,29 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <Footer />
-      {isShowing ? <Modal isShowing={isShowing} hide={hideModal} /> : null}
+
+      <CookieConsent
+        location="bottom"
+        containerClasses="align-items-center"
+        buttonText="Verstanden"
+        cookieName="myAwesomeCookieName2"
+        style={{ background: "#2B373B" }}
+        disableButtonStyles
+        buttonClasses="gdpr-accept-btn"
+        expires={150}
+      >
+        mint-im-kopf.de verwendet Cookies{" "}
+        <span role="img" aria-label="cookie">
+          🍪
+        </span>
+        , um die Seitennutzung auszuwerten und zu optimieren. Cookies werden
+        teilweise auch von Diensten Dritter gesetzt. Weitere Infos finden Sie in
+        unserem{" "}
+        <Link to="gdpr" className="gdpr-link">
+          Datenschutzhinweis
+        </Link>
+        .
+      </CookieConsent>
     </>
   )
 }

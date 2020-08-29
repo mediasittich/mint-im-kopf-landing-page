@@ -1,0 +1,27 @@
+.gdpr-link {
+    color: white;
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+        color: $mint;
+    }
+}
+
+.gdpr-accept-btn {
+    color: #2B373B;
+    font-size: 1rem;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 7px 15px 7px;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+
+    &:hover,
+    &:active {
+        background-color: $mint;
+        color: white;
+    }
+}
