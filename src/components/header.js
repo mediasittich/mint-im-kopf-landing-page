@@ -13,7 +13,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="white" variant="primary">
         <div className="container-fluid">
           <Link className="logo-link my-3" to="/">
-            <Logo className="logo" />
+            <Logo className="logo" height="88.31" width="205.84" />
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <FiMenu className="toggle-icon text-primary" />
