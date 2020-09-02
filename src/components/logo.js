@@ -18,15 +18,21 @@ const Logo = () => {
     query {
       placeholderImage: file(relativePath: { eq: "Logo_small.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          fixed {
+            ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Img
+      fixed={data.placeholderImage.childImageSharp.fixed}
+      alt="Mint im Kopf"
+      className="logo"
+    />
+  )
 }
 
 export default Logo

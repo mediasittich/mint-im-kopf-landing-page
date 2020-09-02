@@ -4,7 +4,8 @@ import { FiMenu } from "react-icons/fi"
 
 import { Navbar, Nav } from "react-bootstrap"
 
-import Logo from "../images/SylviaLogo.svg"
+import Logo from "./logo"
+
 import PageLinks from "../constants/pageLinks"
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="white" variant="primary">
         <div className="container-fluid">
           <Link className="logo-link my-3" to="/">
-            <Logo className="logo" height="88.31" width="205.84" />
+            <Logo />
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav">
             <FiMenu className="toggle-icon text-primary" />
