@@ -69,21 +69,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`900`],
-          },
-          {
-            family: `Work Sans`,
-            variants: [`300`],
-          },
-          {
-            family: `Roboto`,
-            variants: [`300`, `400`, `500`, `700`],
-          },
+          `Montserrat\:900`,
+          `Work Sans\:300`,
+          `Roboto\:300,400,500,700`
         ],
       },
     },
