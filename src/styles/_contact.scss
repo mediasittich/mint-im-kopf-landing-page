@@ -1,0 +1,18 @@
+.alert-message {
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid $mint-dark;
+
+    & > h5 {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    &.alert-message-success {
+        background-color: $mint-opacity;
+
+        & > h5 {
+            color: $mint-dark;
+        }
+    }
+}
