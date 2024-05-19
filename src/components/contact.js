@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import Form from "./form"
+import ContactForm from "./contactForm"
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -43,6 +44,7 @@ const Contact = () => {
             </div>
 
             <Form data={data} />
+            <ContactForm />
           </div>
         </div>
       </div>
