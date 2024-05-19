@@ -4,7 +4,7 @@ const ContactForm = () => {
   return (
     <form
       name="contactForm"
-      action="POST"
+      method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
@@ -13,6 +13,7 @@ const ContactForm = () => {
           Do not fill this out if you are human: <input name="bot-field" />
         </label>
       </p>
+      <input type="hidden" name="form-name" value="contactForm" />
 
       <div className="form-row">
         <div className="form-group col-md-6">
