@@ -8,7 +8,7 @@ const ContactForm = () => {
       data-netlify="true"
       netlify-honeypot="bot-field"
     >
-      <p className="hidden">
+      <p className="d-none">
         <label>
           Do not fill this out if you are human: <input name="bot-field" />
         </label>
