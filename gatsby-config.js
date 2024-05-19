@@ -71,11 +71,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Montserrat\:900`,
-          `Work Sans\:300`,
-          `Roboto\:300,400,500,700`
-        ],
+        fonts: [`Montserrat\:900`, `Work Sans\:300`, `Roboto\:300,400,500,700`],
       },
     },
     {
@@ -91,17 +87,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none",
-        // this option places the tracking script into the head of the DOM
-        head: true,
-        // other options
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
