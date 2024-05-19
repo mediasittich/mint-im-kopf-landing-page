@@ -99,6 +99,8 @@ const ContactForm = () => {
               name="firstname"
               id="inputFirstName"
               className="form-control"
+              value={firstname}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -109,6 +111,8 @@ const ContactForm = () => {
             name="phone"
             className="form-control"
             id="inputPhone"
+            value={phone}
+            onChange={handleChange}
           />
         </div>
         <div className="form-group">
@@ -123,6 +127,8 @@ const ContactForm = () => {
               type="email"
               name="email"
               required
+              value={email}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -134,6 +140,8 @@ const ContactForm = () => {
             id="textMessage"
             rows="5"
             required
+            value={textMessage}
+            onChange={handleChange}
           ></textarea>
         </div>
         <div className="form-group row justify-content-center mt-4">
