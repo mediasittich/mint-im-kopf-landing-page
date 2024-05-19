@@ -31,6 +31,7 @@ const ContactForm = () => {
   //       textMessage,
   //     })
   //   }, [lastname, firstname, phone, email, textMessage])
+  const [success, setSuccess] = useState(false)
 
   const [formData, setFormData] = useState({
     lastname: "",
@@ -50,6 +51,7 @@ const ContactForm = () => {
     })
       .then(() => {
         alert("Success!")
+        setSuccess(true)
         setFormData({
           lastname: "",
           firstname: "",
@@ -70,10 +72,13 @@ const ContactForm = () => {
 
   return (
     <div>
-      <div className="alert-message alert-message-success">
-        <h5 className="card-title">Vielen Dank für Ihre Nachticht!</h5>
-        <p>Ich werde mich schnellstmöglich bei Ihnen melden.</p>
-      </div>
+      {success && (
+        <div className="alert-message alert-message-success">
+          <h5 className="card-title">Vielen Dank für Ihre Nachticht!</h5>
+          <p>Ich werde mich schnellstmöglich bei Ihnen melden.</p>
+        </div>
+      )}
+
       <form
         name="contactForm"
         method="POST"
