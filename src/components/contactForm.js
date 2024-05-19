@@ -6,31 +6,31 @@ const encode = data => {
     .join("&")
 }
 
-function useInputValue() {
-  const [value, setValue] = useState("")
-  const handleChange = useCallback(event => {
-    console.log(event.target.value)
-    setValue(event.target.value)
-  }, [])
-  return [value, handleChange]
-}
+// function useInputValue() {
+//   const [value, setValue] = useState("")
+//   const handleChange = useCallback(event => {
+//     console.log(event.target.value)
+//     setValue(event.target.value)
+//   }, [])
+//   return [value, handleChange]
+// }
 
 const ContactForm = () => {
-  const [lastname, setLastname] = useInputValue()
-  const [firstname, setFirstname] = useInputValue()
-  const [phone, setPhone] = useInputValue()
-  const [email, setEmail] = useInputValue()
-  const [textMessage, setTextMessage] = useInputValue()
+  //   const [lastname, setLastname] = useInputValue()
+  //   const [firstname, setFirstname] = useInputValue()
+  //   const [phone, setPhone] = useInputValue()
+  //   const [email, setEmail] = useInputValue()
+  //   const [textMessage, setTextMessage] = useInputValue()
 
-  const result = useMemo(() => {
-    return JSON.stringify({
-      lastname,
-      firstname,
-      phone,
-      email,
-      textMessage,
-    })
-  }, [lastname, firstname, phone, email, textMessage])
+  //   const result = useMemo(() => {
+  //     return JSON.stringify({
+  //       lastname,
+  //       firstname,
+  //       phone,
+  //       email,
+  //       textMessage,
+  //     })
+  //   }, [lastname, firstname, phone, email, textMessage])
 
   const [formData, setFormData] = useState({
     lastname: "",
@@ -39,22 +39,25 @@ const ContactForm = () => {
     email: "",
     textMessage: "",
   })
+  const { lastname, firstname, phone, email, textMessage } = formData
 
-  const handleSubmit = useCallback(
-    event => {
-      event.preventDefault()
-      console.log(result)
+  const handleSubmit = event => {
+    event.preventDefault()
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contactForm", ...formData }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+  }
 
-      // fetch("/", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      //   body: JSON.stringify({ "form-name": "contactForm", ...formData }),
-      // })
-      //   .then(() => alert("Success!"))
-      //   .catch(error => alert(error))
-    },
-    [result]
-  )
+  const handleChange = event => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    })
+  }
 
   return (
     <div>
@@ -86,7 +89,7 @@ const ContactForm = () => {
               className="form-control"
               required
               value={lastname}
-              onChange={setLastname}
+              onChange={handleChange}
             />
           </div>
           <div className="form-group col-md-6">
