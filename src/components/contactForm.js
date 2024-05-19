@@ -50,7 +50,7 @@ const ContactForm = () => {
       body: encode({ "form-name": "contactForm", ...formData }),
     })
       .then(() => {
-        alert("Success!")
+        // alert("Success!")
         setSuccess(true)
         setFormData({
           lastname: "",
