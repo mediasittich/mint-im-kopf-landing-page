@@ -43,7 +43,6 @@ const Contact = () => {
               </p>
             </div>
 
-            <Form data={data} />
             <ContactForm />
           </div>
         </div>
