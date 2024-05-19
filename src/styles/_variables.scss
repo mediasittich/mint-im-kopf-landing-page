@@ -1,21 +1,44 @@
-// @import url("https://use.typekit.net/cpl7coq.css");
+// @import url("https://use.typekit.net/cpl7coq.css");3
+$main-font: 'Roboto', sans-serif;
+$body-font-family: 'Roboto', sans-serif;
+$heading-font-family: 'Montserrat', sans-serif;
+@font-face {
+    font-family: $body-font-family;
+    src: url('../../src/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: $body-font-family;
+    src: url('../../src/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: $body-font-family;
+    src: url('../../src/fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: $body-font-family;
+    src: url('../../src/fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: $heading-font-family;
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+}
+
 $mint: #68ba82;
 $mint-opacity: rgba(104, 186, 130, 0.1);
 $mint-dark: #064a23;
 $theme-colors: ('primary': $mint-dark);
-$main-font: 'Roboto',
-sans-serif;
+
 $primary-color: $mint;
 $highlight-color: $mint;
 $light-gray: #f8f8f8;
 $main-font-color: #808080;
 $off-white: #ecf0f1;
 $dark-gray: #242529;
-
-$body-font-family: 'Roboto',
-sans-serif;
-$heading-font-family: 'Montserrat',
-sans-serif;
 
 $font-family-sans-serif: $body-font-family;
 $font-weight-base: 300;

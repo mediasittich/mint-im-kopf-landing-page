@@ -68,12 +68,12 @@ module.exports = {
         offset: 0,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Montserrat\:900`, `Work Sans\:300`, `Roboto\:300,400,500,700`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`Montserrat\:900`, `Roboto\:300,400,500,700`],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
