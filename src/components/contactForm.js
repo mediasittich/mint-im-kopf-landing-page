@@ -1,12 +1,43 @@
 import React, { useState } from "react"
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    lastname: "",
+    firstname: "",
+    phone: "",
+    email: "",
+    textMessage: "",
+  })
+
+  const handleChange = e => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = e => {
+    console.log(formData)
+    // e.preventDefault()
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: JSON.stringify({ "form-name": "contactForm", ...formData }),
+    // })
+    //   .then(() => alert("Success!"))
+    //   .catch(error => alert(error))
+  }
+
   return (
     <form
       name="contactForm"
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
     >
       <p className="d-none">
         <label>
