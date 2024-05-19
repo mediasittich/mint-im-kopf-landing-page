@@ -40,9 +40,13 @@ const Hero = () => {
                 className="lead pb-2 pb-sm-5 mt-n4 mt-sm-0"
                 source={data.strapiHero.description}
               />
-              {data.strapiHero.cta.map(btn => {
+              {data.strapiHero.cta.map((btn, index) => {
                 return (
-                  <AnchorLink to={btn.ref} className="btn cta px-5 py-3">
+                  <AnchorLink
+                    key={index}
+                    to={btn.ref}
+                    className="btn cta px-5 py-3"
+                  >
                     {btn.title}
                   </AnchorLink>
                 )
